@@ -1,0 +1,67 @@
+<!doctype html>
+<html ng-app="employeeApp">
+<head>
+    <title>Feed New Employee</title> 
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script src="js/employeeController.js"></script>
+</head>
+    <body align="center" bgcolor="lightblue">
+    <div id="employeeDiv">
+      <form name = "employeeForm" ng-controller="employeeController">
+      
+        <table align="center">
+        <tr><th colspan="2">  <h2>Feed New Employee</h2></th></tr>
+        <tr><td>Employee Id:</td><td><input type="text"  name="employeeId" ng-model="info.employeeId"/></td></tr><br/>
+        <tr><td>Employee Name:</td><td><input type="text" name="employeeName" ng-model="info.employeeName"/></td></tr><br/>
+        <tr><td>Email Id:</td><td><input type="email" name="emailId" ng-model="info.emailId"/></td></tr><br/>
+        <tr><td>Designation:</td><td><input type="text" name="designation" ng-model="info.designation"/></td></tr><br/>
+        <tr><td>Total Leaves Applicable:</td><td><input type="text" name="totalLeavesApplicable" ng-model="info.totalLeavesApplicable"/></td></tr><br/>
+        </table><br/>
+        <input type="submit" value="submit" ng-click="addNewEmployee()"/>
+             
+         
+          
+      </form>
+        
+        
+       
+    </div>
+</body>
+</html>
+<form name="myForm" class="form-horizontal">
+			<div class="highlight" >
+			<center><h2>Feed New Employee</h2></center>
+			<div class="form-group" >
+	  			<lable class="col-sm-4 control-label">EmployeeId</lable>
+	  			<div class="col-sm-6">
+	  			<input type="text" class="form-control" ng-model="employeeId" name="employeeId" placeholder="enter EmployeeId" required ng-pattern="/^id_[0-9]+$/"/>
+	  			</div>
+			</div><br>	
+				
+			<div class="form-group ">
+	  			<lable class="col-sm-4 control-label">EmployeeName</lable>
+	  			<div class="col-sm-6">
+	  			<input type="text" class="form-control" ng-model="employeeName"  placeholder="employeeName" required>
+	  			</div>
+			</div><br>
+			<div class="form-group ">
+	  			<lable class="col-sm-4 control-label">EmailId</lable>
+	  			<div class="col-sm-6">
+	  			<input type="email" class="form-control" ng-model="emailId"  placeholder="Email Id" required>
+	  			</div>
+			</div><br>
+			<div class="form-group ">
+	  			<lable class="col-sm-4 control-label">Designation</lable>
+	  			<div class="col-sm-6">
+	  			<input type="text" class="form-control" ng-model="designation"  placeholder="Designation" required>
+	  			</div>
+			</div><br>
+			<div class="form-group ">
+	  			<lable class="col-sm-4 control-label">Total Leaves Applicable</lable>
+	  			<div class="col-sm-6">
+	  			<input type="text" class="form-control" ng-model="totalLeavesApplicable" name="totalLeavesApplicable" placeholder="total leaves" required>
+	  			</div>
+			</div><br>
+	        <button ng-click="addEmployee()" class="btn btn-primary" style="margin-left: 46%;">Addemp</button>
+    	</div>
+    </form>

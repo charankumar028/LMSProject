@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<title>Leave Management</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		body 		{ padding-top:80px; word-wrap:break-word; }
+	</style>
+</head>
+<body>
+<div class="container">
+
+	<div class="page-header text-center">
+		<h1><span class="fa fa-anchor"></span> Profile Page</h1>
+		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+	</div>
+
+	<div class="row">
+
+		<!-- GOOGLE INFORMATION -->
+		<div class="col-sm-6" style="margin-left: 25%;">
+			<div class="well">
+				<h3 class="text-danger"><span class="fa fa-google-plus"></span> Google</h3>
+					<img src = <%= userinfo.picture %> alt="Smiley face" style="width: 86px;height: 88px;float: right;">
+					<p>
+						<strong>id</strong>: <%= userinfo.id %><br>
+						<strong>token</strong>: <%= userinfo.token %><br>
+						<strong>email</strong>: <%= userinfo.email %><br>
+						<strong>name</strong>: <%= userinfo.name %>
+					</p>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+</body>
+</html>
